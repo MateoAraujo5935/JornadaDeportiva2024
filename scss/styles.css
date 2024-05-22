@@ -69,3 +69,28 @@ section{
 .firma{
     font-weight: bold;
 }
+
+.countdown{
+    background-color: #000;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 0; 
+    padding: 0;
+    border: 1px solid rgba(7,115,214);
+    box-shadow: rgba(7,115,214, 0.4) 5px 5px, rgba(7,115,214, 0.3) 10px 10px, rgba(7,115,214, 0.2) 15px 15px, rgba(7,115,214, 0.1) 20px 20px, rgba(7,115,214, 0.05) 25px 25px;;
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nova+Square&display=swap');
+#contador{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Anton', 'sans-serif';
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(175,139,59,1) 0%, rgba(7,15,214,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -20,7 +20,7 @@ const countdown = (deadline, elem, finalMessage) => {
 
     const timerupdate = setInterval( () => {
     let t = getRemainTime(deadline);
-    el.innerHTML = `${t.remainDays}d:${t.remainHours}h:${t.remainMinutes}m:${t.remainSeconds}s`
+    el.innerHTML = `${t.remainDays} D : ${t.remainHours} HS : ${t.remainMinutes} MINS`
 
     if (t.remainTime <= 1) {
         clearInterval(timerupdate);
@@ -29,4 +29,4 @@ const countdown = (deadline, elem, finalMessage) => {
     }, 1000)
 };
 
-countdown('Sep 21 2024 7:20:01 GMT-0300', 'contador', 'LLEGÓ LA JORNADA!' )
+countdown('Sep 21 2024 7:20:00 GMT-0300', 'contador', 'LLEGÓ LA JORNADA!' )
