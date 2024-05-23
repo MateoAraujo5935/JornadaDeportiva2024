@@ -6,6 +6,9 @@
     <title>JORNADA 2024</title>
     <link rel="stylesheet" href="scss/styles.css">
     <link rel="stylesheet" href="scss/custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -92,13 +95,20 @@
 </div>
 
 <!--TEMPORIZADOR-->
-<script src="./js/countdown.js"></script>
 
-<div class="countdown">
-    <h2 id="contador"></h2>
+<div id="contador">
+  <div><span class="number" id="days">0</span><span>Días</span></div>
+  <div class="separator">:</div>
+  <div><span class="number" id="hours">00</span><span>Horas</span></div>
+  <div class="separator">:</div>
+  <div><span class="number" id="minutes">00</span><span>Minutos</span></div>
+  <div class="separator">:</div>
+  <div><span class="number" id="seconds">00</span><span>Segundos</span></div>
 </div>
 
-</section>
 
+<script src="./js/countdown.js"></script>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aut praesentium asperiores quibusdam provident laboriosam ab pariatur eum tempora, rem porro repellendus quod ullam id beatae. Alias maxime ex quam.</p>
+</section>
 </body>
 </html>

@@ -70,27 +70,74 @@ section{
     font-weight: bold;
 }
 
-.countdown{
-    background-color: #000;
-    height: 50vh;
+
+/* countdown */
+#contador {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 2em 0; 
-    padding: 0;
-    border: 1px solid rgba(7,115,214);
-    box-shadow: rgba(7,115,214, 0.4) 5px 5px, rgba(7,115,214, 0.3) 10px 10px, rgba(7,115,214, 0.2) 15px 15px, rgba(7,115,214, 0.1) 20px 20px, rgba(7,115,214, 0.05) 25px 25px;;
-    
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    color: white;
+    background-color: #800080;
+    /* Color de fondo morado */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    flex-wrap: wrap;
 }
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nova+Square&display=swap');
-#contador{
-    font-size: 40px;
+
+#contador div {
+    margin: 5px 10px;
     text-align: center;
-    font-family: 'Anton', 'sans-serif';
+}
+
+#contador div span {
+    display: block;
+    font-size: 1.2rem;
+}
+
+#contador .number {
+    font-size: 3rem;
     font-weight: bold;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(90deg, rgba(175,139,59,1) 0%, rgba(7,15,214,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+}
+
+.separator {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    #contador {
+        font-size: 1.5rem;
+    }
+
+    #contador .number {
+        font-size: 2rem;
+    }
+
+    .separator {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #contador {
+        font-size: 1rem;
+        flex-direction: column;
+    }
+
+    #contador .number {
+        font-size: 1.5rem;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    #contador div {
+        margin: 5px 0;
+    }
 }
