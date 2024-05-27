@@ -5994,7 +5994,6 @@ textarea.form-control-lg {
   position: relative;
   width: 100%;
   overflow: hidden;
-  transition: all 0.5s erase-in;
 }
 .carousel-inner::after {
   display: block;
@@ -6009,11 +6008,7 @@ textarea.form-control-lg {
   width: 100%;
   margin-right: -100%;
   backface-visibility: hidden;
-}
-@media (prefers-reduced-motion: reduce) {
-  .carousel-item {
-    transition: none;
-  }
+  transition: all 1s ease-in-out;
 }
 
 .carousel-item.active,
