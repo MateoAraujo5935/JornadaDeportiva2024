@@ -1,17 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
   var contactForm = document.getElementById("contactForm");
   if (contactForm) {
-    // Obtener los campos de entrada
     var fullnameField = document.querySelector('input[name="fullname"]');
     var emailField = document.querySelector('input[name="email"]');
     var phoneField = document.querySelector('input[name="phone"]');
     var messageField = document.querySelector('textarea[name="message"]');
 
-    // Definir patrones de validación
     var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     var phonePattern = /^\+?[0-9]{10,15}$/;
 
-    // Función para validar el nombre completo
+    // NOMBRE COMPLETO
     function validateFullname() {
       if (fullnameField.value.trim() === "") {
         document.getElementById("error-fullname").classList.add("active");
@@ -24,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Función para validar el correo electrónico
+    // MAIL
     function validateEmail() {
       if (!emailPattern.test(emailField.value)) {
         document.getElementById("error-email").classList.add("active");
@@ -37,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Función para validar el teléfono
+    // TELEFONO
     function validatePhone() {
       if (!phonePattern.test(phoneField.value)) {
         document.getElementById("error-phone").classList.add("active");
@@ -50,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Función para validar el mensaje
+    // MSG
     function validateMessage() {
       if (messageField.value.trim() === "") {
         document.getElementById("error-message").classList.add("active");
@@ -63,13 +61,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Validar en tiempo real cuando se ingresa texto en los campos
+    // escuchar cuando se escribe para verificar en tiempo real
     fullnameField.addEventListener("input", validateFullname);
     emailField.addEventListener("input", validateEmail);
     phoneField.addEventListener("input", validatePhone);
     messageField.addEventListener("input", validateMessage);
 
-    // Agregar validación al enviar el formulario
+    // validar cuando se manda
     contactForm.addEventListener("submit", function (event) {
       // Realizar la validación de todos los campos
       var isValid =
@@ -78,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         validatePhone() &&
         validateMessage();
 
-      // Si todas las validaciones son exitosas, mostrar una alerta de éxito
+      // Sweet alert
       if (isValid) {
         Swal.fire({
           position: "top-end",
@@ -88,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
           timer: 1500,
         });
       } else {
-        // Si alguna validación falla, evitar el envío del formulario
+        // que no se mande si hay algo mal
         event.preventDefault();
       }
     });
