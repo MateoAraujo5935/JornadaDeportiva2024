@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "Formulario enviado con éxito",
+          title: "Mensaje enviado con éxito",
           showConfirmButton: false,
           timer: 1500,
         });

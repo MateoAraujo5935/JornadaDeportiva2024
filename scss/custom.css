@@ -80,8 +80,8 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #000000;
   --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg: #222;
-  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-body-bg: #1F1F1F;
+  --bs-body-bg-rgb: 31, 31, 31;
   --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
   --bs-secondary-color: rgba(33, 37, 41, 0.75);
