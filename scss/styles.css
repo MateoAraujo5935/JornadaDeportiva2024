@@ -434,6 +434,7 @@ textarea.error-input {
     flex-wrap: wrap;
     margin-bottom: 20px;
     align-items: center;
+    justify-content: center;
 }
 
 .card {
@@ -450,7 +451,6 @@ textarea.error-input {
 }
 
 .card h3{
-
     color: #fff;
     font-weight:300;
     font-size: 20px;
